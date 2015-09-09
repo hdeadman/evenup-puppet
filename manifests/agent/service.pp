@@ -28,10 +28,18 @@ class puppet::agent::service (
       cron { 'puppet':
         ensure => 'absent',
       }
-
-      service { 'puppet':
-        ensure => 'running',
-        enable => true,
+	  if $::puppet::server {
+	    # if agent starts up before server it will generate cert and server service won't like that
+        service { 'puppet':
+          ensure => 'running',
+          enable => true,
+          require => Service['puppetserver'],
+        }
+      } else {
+        service { 'puppet':
+          ensure => 'running',
+          enable => true,
+        }
       }
     }
     'none': {

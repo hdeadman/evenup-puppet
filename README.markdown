@@ -183,6 +183,10 @@ String.  Version of puppetserver to install.
 
 Default: latest
 
+#####`basemodulepath`
+String.  Value for basemodulepath - for modules available to all environments
+
+Default: undef (puppet will default based on platform)
 
 ## Reference
 

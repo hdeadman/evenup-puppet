@@ -13,7 +13,6 @@ class puppet::server::config (
   $puppetdb_port   = $::puppet::puppetdb_port,
   $puppetdb_server = $::puppet::puppetdb_server,
   $reports         = $::puppet::server_reports,
-  $basemodulepath  = $::puppet::basemodulepath,
   $firewall        = $::puppet::firewall,
 ) {
 

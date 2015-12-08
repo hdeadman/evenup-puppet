@@ -18,6 +18,7 @@ class puppet (
   Integer                                      $puppetdb_port     = $::puppet::params::puppetdb_port,
   Optional[String]                             $puppetdb_server   = $::puppet::params::puppetdb_server,
   String                                       $puppetdb_version  = $::puppet::params::puppetdb_version,
+  Boolean                                      $puppetdb_manage_termini = $::puppet::params::puppetdb_manage_termini,
   Boolean                                      $server_ca_enabled = $::puppet::params::server_ca_enabled,
   Optional[String]                             $server_certname   = $::puppet::params::server_certname,
   String                                       $server_java_opts  = $::puppet::params::server_java_opts,

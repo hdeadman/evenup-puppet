@@ -25,6 +25,7 @@ class puppet::params {
   $server_version = 'latest'
   $basemodulepath = undef
   $firewall = false
+  $jruby_instances = $::processors[count]-1
 
   case $::osfamily {
     'Debian': {

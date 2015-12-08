@@ -25,8 +25,8 @@ jruby-puppet: {
     # (optional) path to puppet log dir; if not specified, will use the puppet default
     master-log-dir: /var/log/puppetlabs/puppetserver
 
-    # (optional) maximum number of JRuby instances to allow; defaults to <num-cpus>+2
-    # max-active-instances: 1
+    # (optional) maximum number of JRuby instances to allow
+    max-active-instances: <%= if @jruby_instances > 0 then @jruby_instances else 1 end %>
 }
 
 # settings related to HTTP client requests made by Puppet Server

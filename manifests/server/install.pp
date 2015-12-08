@@ -25,11 +25,11 @@ class puppet::server::install (
     ensure => $_server_version,
   }
 
-  if $puppetdb_manage_termini (
+  if $puppetdb_manage_termini {
     package { 'puppetdb-termini':
       ensure => $_puppetdb_version,
     }
-  )
+  }
 
   # Set up environments
   file { '/etc/puppetlabs/code/environments':

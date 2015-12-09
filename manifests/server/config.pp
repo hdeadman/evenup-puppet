@@ -15,6 +15,7 @@ class puppet::server::config (
   $reports         = $::puppet::server_reports,
   $firewall        = $::puppet::firewall,
   $jruby_instances = $::puppet::jruby_instances,
+  $use_legacy_auth_conf = $::puppet::use_legacy_auth_conf,
 ) {
 
   $file_ensure = $server ? {

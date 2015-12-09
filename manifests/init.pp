@@ -29,6 +29,7 @@ class puppet (
   Optional[String]                             $basemodulepath    = $::puppet::params::basemodulepath,
   Boolean                                      $firewall          = $::puppet::params::firewall,
   Integer                                      $jruby_instances   = $::puppet::params::jruby_instances,
+  String                                       $use_legacy_auth_conf = $::puppet::params::use_legacy_auth_conf,
 ) inherits puppet::params {
 
   if $puppetdb and !$puppetdb_server {

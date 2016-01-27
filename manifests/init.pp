@@ -13,11 +13,13 @@ class puppet (
   # Server
   Optional[Array[String]]                      $dns_alt_names     = $::puppet::params::dns_alt_names,
   Optional[Hash[String, Hash[String, String]]] $fileserver_conf   = $::puppet::params::fileserver_conf,
+  Boolean                                      $manage_hiera      = $::puppet::params::manage_hiera,
   Optional[Pattern[/\Apuppet/]]                $hiera_source      = $::puppet::params::hiera_source,
   Boolean                                      $puppetdb          = $::puppet::params::puppetdb,
   Integer                                      $puppetdb_port     = $::puppet::params::puppetdb_port,
   Optional[String]                             $puppetdb_server   = $::puppet::params::puppetdb_server,
   String                                       $puppetdb_version  = $::puppet::params::puppetdb_version,
+  String                                       $runinterval       = $::puppet::params::runinterval,
   Boolean                                      $puppetdb_manage_termini = $::puppet::params::puppetdb_manage_termini,
   Boolean                                      $server_ca_enabled = $::puppet::params::server_ca_enabled,
   Optional[String]                             $server_certname   = $::puppet::params::server_certname,

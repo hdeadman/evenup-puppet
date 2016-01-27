@@ -11,11 +11,13 @@ class puppet::params {
 
   $dns_alt_names = undef
   $fileserver_conf = undef
+  $manage_hiera = true
   $hiera_source = undef
   $puppetdb = false
   $puppetdb_port = 8081
   $puppetdb_server = undef
   $puppetdb_version = 'latest'
+  $runinterval = '30m'  
   $puppetdb_manage_termini = true
   $server_ca_enabled = true
   $server_certname = undef

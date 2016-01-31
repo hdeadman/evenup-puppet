@@ -2,6 +2,9 @@
 [agent]
   environment       = <%= @_environment %>
   runinterval       = <%= @runinterval %>
+  report            = true
+  pluginsync        = true
+  trace             = true
 <% if !@use_srv_records -%>
   server            = <%= if ( @puppetmaster and !@puppetmaster.empty? ) then @puppetmaster else @fqdn end %>
 <% end -%>

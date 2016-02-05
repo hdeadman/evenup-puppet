@@ -95,6 +95,7 @@ class puppet::server::config (
   if ( $server and $hiera_source and $manage_hiera) {
     file { '/etc/puppetlabs/code/hiera.yaml':
       source => $hiera_source,
+      notify => Service['puppetserver']
     }
   } elsif $manage_hiera {
     file { '/etc/puppetlabs/code/hiera.yaml':

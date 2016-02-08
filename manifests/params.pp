@@ -30,6 +30,7 @@ class puppet::params {
   $basemodulepath = undef
   $firewall = false
   $jruby_instances = $::processors[count]-1
+  $ruby_load_path = ['/opt/puppetlabs/puppet/lib/ruby/vendor_ruby']
 
   case $::osfamily {
     'Debian': {

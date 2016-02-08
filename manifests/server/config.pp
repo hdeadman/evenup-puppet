@@ -18,6 +18,7 @@ class puppet::server::config (
   $firewall        = $::puppet::firewall,
   $jruby_instances = $::puppet::jruby_instances,
   $use_legacy_auth_conf = $::puppet::use_legacy_auth_conf,
+  $ruby_load_path  = $::puppet::ruby_load_path,
 ) {
 
   $file_ensure = $server ? {

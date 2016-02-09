@@ -38,6 +38,8 @@ class puppet (
   Optional[String]                             $server_ssl_crl_path   = $::puppet::params::server_ssl_crl_path,
   Optional[String]                             $server_basemodulepath = $::puppet::params::server_basemodulepath,
   Array[String]                                $ruby_load_path        = $::puppet::params::ruby_load_path,
+  String                                       $node_terminus         = undef,
+  String                                       $external_nodes        = undef,
 ) inherits puppet::params {
 
   if $puppetdb and !$puppetdb_server {

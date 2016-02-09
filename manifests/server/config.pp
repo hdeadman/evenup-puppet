@@ -24,6 +24,8 @@ class puppet::server::config (
   $server_ssl_cert_chain = $::puppet::server_ssl_cert_chain,
   $server_ssl_crl_path   = $::puppet::server_ssl_crl_path,
   $ruby_load_path        = $::puppet::ruby_load_path,  
+  $node_terminus         = $::puppet::node_terminus,
+  $external_nodes        = $::puppet::external_nodes,
 ) {
 
   $file_ensure = $server ? {

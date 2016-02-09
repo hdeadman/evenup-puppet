@@ -19,6 +19,8 @@ class puppet::server::config (
   $jruby_instances = $::puppet::jruby_instances,
   $use_legacy_auth_conf = $::puppet::use_legacy_auth_conf,
   $ruby_load_path  = $::puppet::ruby_load_path,
+  $node_terminus   = $::puppet::node_terminus,
+  $external_nodes  = $::puppet::external_nodes,
 ) {
 
   $file_ensure = $server ? {

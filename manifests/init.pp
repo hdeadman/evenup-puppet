@@ -33,6 +33,9 @@ class puppet (
   Integer                                      $jruby_instances   = $::puppet::params::jruby_instances,
   String                                       $use_legacy_auth_conf = $::puppet::params::use_legacy_auth_conf,
   Array[String]                                $ruby_load_path    = $::puppet::params::ruby_load_path,
+  String                                       $node_terminus     = undef,
+  String                                       $external_nodes    = undef,
+  
 ) inherits puppet::params {
 
   if $puppetdb and !$puppetdb_server {

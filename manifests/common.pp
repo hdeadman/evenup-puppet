@@ -8,6 +8,7 @@ class puppet::common(
   $srv_domain      = $::puppet::srv_domain,
   $use_srv_records = $::puppet::use_srv_records,
   $dns_alt_names   = $::puppet::dns_alt_names,
+  $basemodulepath  = $::puppet::server_basemodulepath,  
 ) {
 
   concat { '/etc/puppetlabs/puppet/puppet.conf':

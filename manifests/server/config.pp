@@ -61,8 +61,8 @@ class puppet::server::config (
 
   # Template uses
   # - $ca_enabled
-  file { '/etc/puppetlabs/puppetserver/bootstrap.cfg':
-    content => template("${module_name}/server/bootstrap.cfg.erb"),
+  file { '/etc/puppetlabs/puppetserver/services.d/ca.cfg':
+    content => template("${module_name}/server/ca.cfg.erb"),
   }
 
   # Template uses

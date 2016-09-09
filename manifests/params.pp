@@ -35,7 +35,8 @@ class puppet::params {
   $server_ssl_cert_chain = undef
   $server_ssl_crl_path = undef
   $server_basemodulepath = undef
-
+  $ruby_load_path = ['/opt/puppetlabs/puppet/lib/ruby/vendor_ruby']
+  
   case $::osfamily {
     'Debian': {
       $server_config_dir = '/etc/default'

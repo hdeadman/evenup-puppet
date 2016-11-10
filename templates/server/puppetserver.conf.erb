@@ -42,17 +42,10 @@ jruby-puppet: {
     master-log-dir: /var/log/puppetlabs/puppetserver
 
     # (optional) maximum number of JRuby instances to allow
-    #max-active-instances: 1
+    max-active-instances: <%= if @jruby_instances > 0 then @jruby_instances else 1 end %>
 
     # (optional) Authorize access to Puppet master endpoints via rules specified
     # in the legacy Puppet auth.conf file (if true or not specified) or via rules
-    # specified in the Puppet Server HOCON-formatted auth.conf (if false).
-    use-legacy-auth-conf: <%= if @use_legacy_auth then 'true' else 'false' end %>
-
-
-    # (optional) maximum number of JRuby instances to allow
-    max-active-instances: <%= if @jruby_instances > 0 then @jruby_instances else 1 end %>
-
     # specified in the Puppet Server HOCON-formatted auth.conf (if false).
     use-legacy-auth-conf: <%= if @use_legacy_auth then 'true' else 'false' end %>
 }

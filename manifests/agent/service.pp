@@ -9,7 +9,7 @@ class puppet::agent::service (
     $mode = 'none'
   }
 
-  case $runmode {
+  case $mode {
     'cron': {
       cron { 'puppet':
         ensure  => 'present',
